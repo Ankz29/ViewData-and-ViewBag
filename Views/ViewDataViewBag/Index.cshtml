@@ -1,0 +1,49 @@
+﻿@model List<ViewData_ViewBag.Models.ViewDataViewBag>
+
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<center><h2>---------DETAILS--------</h2></center>
+<center>
+    <table border="1">
+        <tr>
+            <th>Name </th>
+            <th>Address </th>
+            <th>Phone </th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+
+
+            <tr>
+                <td> @item.Name</td>
+
+
+                <td> @item.Address</td>
+
+
+                <td> @item.Phone</td>
+            </tr>
+
+        }
+    </table>
+</center>
+<style>
+    th{
+        font-size:30px;
+    }
+    td {
+        font-size: 30px;
+    }
+    table{
+        text-align: center;
+    }
+</style>
+
+
+
+<center> @TempData["msg"] </center>
